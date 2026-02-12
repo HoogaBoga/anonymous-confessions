@@ -46,6 +46,13 @@ export default function Home() {
           <span>Write a Message</span>
         </Link>
 
+        <Link
+          href="/confessions"
+          className="underline font-tinos mt-5 text-[#4D6B92] hover:text-[#7baff2]"
+        >
+          Go to Confessions Page
+        </Link>
+
         <p className="text-[#4D6B92] text-xs font-tinos opacity-60 mt-15 mb-5">
           COMPLETELY ANONYMOUS
         </p>

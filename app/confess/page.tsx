@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
+import { useRouter } from "next/navigation"
 
 export function FireIcon({ className }: { className?: string }) {
   return (
@@ -86,6 +87,7 @@ export default function Confess() {
   const [message, setMessage] = useState("")
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [statusMessage, setStatusMessage] = useState("")
+  const router = useRouter()
 
   const getButtonClass = (buttonFaction: string) => {
     const baseClass =
@@ -121,6 +123,9 @@ export default function Confess() {
         setMessage("")
         setNickname("")
         setFaction("")
+
+        router.push("/confessions")
+        router.refresh()
       } else {
         setStatusMessage("Failed to send confession.")
       }
